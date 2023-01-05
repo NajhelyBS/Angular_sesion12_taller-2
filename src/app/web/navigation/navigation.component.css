@@ -2,21 +2,26 @@
     width: 220px;
   }
   .menu>button {
-    color: turquoise;
+    color: rgb(29, 241, 220);
+    font-weight: 700;
     width: 120px;
     height: 60px;
     padding-bottom: 5px;
     margin-top: 20px;
     margin-bottom: 14px;
-    background-color: red;
     background-size: contain;
     background-repeat:no-repeat;
     transition: width 0.3s;
     border: none;
+    background: #9D50BB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   .menu>.btn:hover {
-    color:var(--blue);
-    background-color: transparent;
+    font-weight: 700;
+    color: white;
+    background-color: rgba(137, 43, 226, 0.63);
     box-shadow: none;
     width: 140px;
   }

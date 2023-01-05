@@ -1,0 +1,27 @@
+<p>part3 works!</p>
+
+<div class="container-fluid" id="container">
+    <div class="row">
+        <div class="col-md-4 ">
+            <button (click)="show1 = !show1" class="form-control mt-4 mb-4">Estudios Primarios</button>
+            <div class="panel" *ngIf="show1">
+                <p>Completados _ Liceo Naval Contralmirante Montero</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button (click)="show2 = !show2" class="form-control mt-4 mb-4">Estudios Secundarios</button>
+            <div class="panel" *ngIf="show2">
+                <p>Completados _ Liceo Naval Contralmirante Montero</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button (click)="show3 = !show3" class="form-control mt-4 mb-4">Estudios Universitarios</button>
+            <div class="panel" *ngIf="show3">
+                <p>En proceso</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
