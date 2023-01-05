@@ -13,7 +13,6 @@ import { BodyModule } from '../body/body.module';
     BodyModule,
   ],
   exports: [
-    BodyModule,
   ]
 })
 export class WebModule { }

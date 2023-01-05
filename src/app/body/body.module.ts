@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     Part1Component,
+    Part5Component
   ]
 })
 export class BodyModule { }

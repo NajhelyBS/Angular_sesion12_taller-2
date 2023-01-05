@@ -1,6 +1,5 @@
 <p>part5 works!</p>
 
-
 <form [formGroup]="userForm">
     <div>
       <label for="firstName">Nombre: </label>
@@ -11,6 +10,10 @@
       <label for="lastName">Apellido: </label>
       <input type="text" id="lastName" formControlName="lastName">
     </div>
+    <div>
+        <label for="email">Email: </label>
+        <input type="text" id="email" formControlName="email">
+      </div>
   </form>
   <br>
   <button (click)="submitForm()" [disabled]="userForm.invalid">Enviar</button>
