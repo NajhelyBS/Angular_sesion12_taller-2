@@ -1,0 +1,16 @@
+<p>part5 works!</p>
+
+
+<form [formGroup]="userForm">
+    <div>
+      <label for="firstName">Nombre: </label>
+      <input type="text" id="firstName" formControlName="firstName">
+    </div>
+    <br>
+    <div>
+      <label for="lastName">Apellido: </label>
+      <input type="text" id="lastName" formControlName="lastName">
+    </div>
+  </form>
+  <br>
+  <button (click)="submitForm()" [disabled]="userForm.invalid">Enviar</button>

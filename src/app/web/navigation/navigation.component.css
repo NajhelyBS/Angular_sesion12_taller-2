@@ -1,0 +1,22 @@
+.menu {
+    width: 220px;
+  }
+  .menu>button {
+    color: turquoise;
+    width: 120px;
+    height: 60px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    background-color: red;
+    background-size: contain;
+    background-repeat:no-repeat;
+    transition: width 0.3s;
+    border: none;
+  }
+  .menu>.btn:hover {
+    color:var(--blue);
+    background-color: transparent;
+    box-shadow: none;
+    width: 140px;
+  }
