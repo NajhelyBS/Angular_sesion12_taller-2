@@ -1,25 +1,42 @@
-<p>part5 works!</p>
 
-<form [formGroup]="userForm">
-    <div>
-      <label for="firstName">Nombre: </label>
-      <input type="text" id="firstName" formControlName="firstName">
+<main class="d-flex justify-content-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center" >
+                <p class="tittle mt-2 mb-2 ">Contáctame: </p>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center">
+
+                <form [formGroup]="userForm">
+            <div class="row">
+                    <div class="col-md-6">
+                      <label for="firstName" class="form-label">Nombre: </label><br>
+                      <input type="text" id="firstName" formControlName="firstName" class="form-control">
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                      <label for="lastName" class="form-label">Apellido: </label><br>
+                      <input type="text" id="lastName" formControlName="lastName" class="form-control">
+                    </div>
+                    <br>
+            </div><br>
+                    <div>
+                        <label for="email" class="form-label">Email: </label><br>
+                        <input type="text" id="email" formControlName="email" class="form-control">
+                      </div>
+                    <br>
+                    <div>
+                        <label for="message" class="form-label">Mensaje: </label><br>
+                        <textarea name="message" id="message" cols="30" rows="5" formControlName="message" class="form-control">
+                        </textarea>
+                      </div>
+                  </form>
+            </div>
+            <div class="col-md-12 mt-3 d-flex justify-content-center">
+                <button (click)="submitForm()" [disabled]="userForm.invalid" class="form-control mt-2 mb-4" >Enviar</button>
+            </div>
+        </div>
     </div>
-    <br>
-    <div>
-      <label for="lastName">Apellido: </label>
-      <input type="text" id="lastName" formControlName="lastName">
-    </div>
-    <br>
-    <div>
-        <label for="email">Email: </label>
-        <input type="text" id="email" formControlName="email">
-      </div>
-    <br>
-    <div>
-        <label for="message">Mensaje: </label>
-        <input type="text" id="message" formControlName="message">
-      </div>
-  </form>
-  <br>
-  <button (click)="submitForm()" [disabled]="userForm.invalid">Enviar</button>
+<div>
+</div>
+</main>
