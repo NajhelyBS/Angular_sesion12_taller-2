@@ -1,0 +1,10 @@
+body{
+    border: #8a3ab9 dashed 2px;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  h1 {
+    color:rgba(98, 9, 182, 0.774);
+  }

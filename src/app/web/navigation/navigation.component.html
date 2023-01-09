@@ -1,9 +1,19 @@
 <!--===Botones de navegación======-->
-<div class="menu">
-    <button class="btn" >Presentación</button>
-    <button class="btn" >Información Personal</button>
-    <button class="btn" >Estudios</button>
-    <button class="btn" >Projectos</button>
-    <button class="btn" >Contacto</button>
+<section>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" id="row1">
+          <div class="menu">
+            <button class="btn" [routerLink]="'/presentacion'" routerLinkActive="active">Profile</button>
+            <button class="btn" [routerLink]="'/data'">Personal Information</button>
+            <button class="btn" [routerLink]="'/education'" >Education</button>
+            <button class="btn" [routerLink]="'/objective'" >Objectives</button>
+            <button class="btn" [routerLink]="'/contact'">Contact me</button>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <router-outlet></router-outlet>
+        </div>
+    </div>
   </div>
-
+</section>

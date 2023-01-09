@@ -10,18 +10,24 @@ main {
     font-weight: 720;
     color: white;
 }
+
+.description {
+    font-weight: 680;
+    text-shadow:  rgb(233, 236, 52) 0px 4px 4px;
+}
 label {
     font-weight: 620;
-    color: aqua;
+    color: rgb(233, 236, 52);
     text-shadow: #4c13a8 0px 0px 6px;
+    background-color: #6e48aa8f;
 }
 
 button {
     width: 16em;
     color: white;
     font-weight: 500;
-    background: #9D50BB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+button:disabled{
+    box-shadow: red 0px 0px 4px 2px ;
+}

@@ -7,7 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class Part1Component {
 
+//valores predeterminados
 
-
+Nombre:String = "Najhely ";
+Apellido:String = " Banda";
 
 }

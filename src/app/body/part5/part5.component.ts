@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -7,43 +7,43 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   templateUrl: './part5.component.html',
   styleUrls: ['./part5.component.css']
 })
-export class Part5Component {
 
-  userForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+export class Part5Component implements OnInit {
 
-  //Dando validaciones
+  public ContactForm!: FormGroup;
+  
+  constructor(private formBuilder:FormBuilder){
 
-  ngOnInit() {
-    this.userForm = this.fb.group({
-      firstName: [Validators.required, Validators.maxLength(10)],
-      lastName: [Validators.required, Validators.maxLength(10)],
-      email: [Validators.required, Validators.email],
-      message: [Validators.required, Validators.maxLength(100)],
-   
-    });
-
-    this.loadApi()
   }
 
-  //Valores predeterminados con los que se cargará el formulario
+  ngOnInit(): void {
+    this.ContactForm = this.formBuilder.group ({
+      firstName: ['',Validators.required,Validators.minLength(12)],
+      lastName: ['',Validators.required,Validators.minLength(12)],
+      email: ['',Validators.required,Validators.email],
+      message: ['',Validators.required,Validators.maxLength(350)],
 
-  loadApi():any{
-    const response = {
-      firstName: "Najhely",
-      lastName: "Banda",
-      email: "nbanda@gmail.com",
-      message: "Escribe tu mensaje"
+    })
+
+    this.Values();
+
+  }
+
+  Values():any {
+    const valores = {
+      firstName: 'Najhely',
+      lasName: 'Banda',
+      email: 'nbanda@gmail.com',
+      message: 'Escribe aquí tu comentario...'
     }
 
-    this.userForm.patchValue(response);
+    this.ContactForm.patchValue(valores);
 
-  }
+  };
 
-  submitForm() {
-    console.log('Formulario enviado con el valor: ', this.userForm.value);
+  send():any{
+    console.log(this.ContactForm.value);
+
   }
 }
-
-

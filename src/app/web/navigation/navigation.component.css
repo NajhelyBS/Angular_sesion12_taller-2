@@ -2,7 +2,7 @@
     width: 220px;
   }
   .menu>button {
-    color: rgb(29, 241, 220);
+    color: white;
     font-weight: 700;
     width: 120px;
     height: 60px;
@@ -20,7 +20,7 @@
   }
   .menu>.btn:hover {
     font-weight: 700;
-    color: white;
+    color: rgb(233, 236, 52);
     background-color: rgba(137, 43, 226, 0.63);
     box-shadow: none;
     width: 140px;
