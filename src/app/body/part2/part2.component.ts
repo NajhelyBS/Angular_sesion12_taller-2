@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Part2Component {
 
+  selected:String = "0";
+  option:String ="";
+
+
+  Select(){
+    this.option = (<HTMLSelectElement>document.getElementById('data')).value;
+    this.selected = this.option;
+  }
 }

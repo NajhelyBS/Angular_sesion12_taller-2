@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-part5',
@@ -11,38 +10,34 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 export class Part5Component implements OnInit {
 
+  onFormSubmit() {
+    const {value, valid} = this.ContactForm;
+    if(valid) {
+         console.log(value);
+        // do something here.
+    }
+}
+
   public ContactForm!: FormGroup;
-  
+
   constructor(private formBuilder:FormBuilder){
 
   }
 
   ngOnInit(): void {
-    this.ContactForm = this.formBuilder.group ({
-      firstName: ['',Validators.required,Validators.minLength(12)],
-      lastName: ['',Validators.required,Validators.minLength(12)],
-      email: ['',Validators.required,Validators.email],
-      message: ['',Validators.required,Validators.maxLength(350)],
-
-    })
-
-    this.Values();
-
-  }
-
-  Values():any {
-    const valores = {
-      firstName: 'Najhely',
-      lasName: 'Banda',
-      email: 'nbanda@gmail.com',
-      message: 'Escribe aquí tu comentario...'
+    
+    this.ContactForm = this.formBuilder.group({
+      firstName:['',Validators.required],})
+  
+  
     }
 
-    this.ContactForm.patchValue(valores);
+    Values():any{
 
-  };
+    }
 
   send():any{
+    alert("Mensaje enviado");
     console.log(this.ContactForm.value);
 
   }

@@ -2,6 +2,66 @@
     <h1>Personal Information</h1>
     <hr>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 mt-5">
+                <section>
+                    <select name="data" id="data" class="form-control" (change)="Select()">
+                        <option value="0" selected>Ocupación</option>
+                        <option value="1">Correo electrónico</option>
+                        <option value="2">Fecha de Nacimiento</option>
+                        <option value="3">Nacionalidad</option>
+                        <option value="4">Provincia</option>
+                        <option value="5">Distrito</option>
+                    </select>
+                </section>
+            </div>
+            <div class="col-md-8 offset-1">
+                <div class="row">
+                    <div class="col-md-4 mt-5">
+                        <section [ngSwitch]="selected">
+                            <input *ngSwitchDefault="0" type="text" class="form-control" value="Estudiante" disabled>
+                            <input *ngSwitchCase="1" type="text" class="form-control" value="nbanda@gmail.com" disabled>
+                            <input *ngSwitchCase="2" type="date" name="date" id="date" value="2003-10-23" class="form-control"
+                                disabled>
+                            <input *ngSwitchCase="3" type="text" class="form-control" value="Peruana" disabled>
+                            <input *ngSwitchCase="4" type="text" class="form-control" value="Lima" disabled>
+                            <input *ngSwitchCase="5" type="text" class="form-control" value="Ate-Vitarte" disabled>
+                        </section>
+                    </div>
+        
+                    <div class="col-md-2 offset-1">
+                        <section [ngSwitch]="selected">
+                            <img *ngSwitchDefault="0" width="300" height="200"
+                                src="https://media.istockphoto.com/id/1171913244/vector/woman-with-laptop-education-or-working-concept-table-with-books-lamp-coffee-cup-vector.jpg?s=612x612&w=0&k=20&c=7e12Gv9QRyJxBiJMPuxtpgjnMNIuhWYWUBf_yGadCuU="
+                                alt="">
+                            <img *ngSwitchCase="1" width="300" height="200"
+                                src="https://img.freepik.com/vector-gratis/marketing-correo-electronico-chat-internet-soporte-24-horas_335657-3009.jpg?w=2000"
+                                alt="">
+                            <img *ngSwitchCase="2" width="300" height="200"
+                                src="https://img.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg?w=2000"
+                                alt="">
+                            <img *ngSwitchCase="3" width="300" height="200"
+                                src="https://img.freepik.com/vector-premium/lapiz-color-bandera-peru-o-vector-dibujo-marcador_97173-781.jpg?w=2000"
+                                alt="">
+                            <img *ngSwitchCase="4" width="300" height="200"
+                                src="https://img.freepik.com/vector-premium/esquema-horizonte-ciudad-lima-peru-edificios-blancos-ilustracion-vector-concepto-turismo-viajes-negocios-arquitectura-historica-paisaje-urbano-lima-hitos_119523-1144.jpg?w=2000"
+                                alt="">
+                            <img *ngSwitchCase="5" width="300" height="200"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDXxoPpQ9TXJxzFbGySPaiSaXfVcs-Hk6GGPmHpgx5nrD9bi-H1NCQs7qbOALjTm7ZMDQ&usqp=CAU"
+                                alt="">
+        
+                        </section>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+
+        <hr>
+
+
+    </div>
     
 
 </body>
