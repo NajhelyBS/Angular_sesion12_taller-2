@@ -1,27 +1,46 @@
-<p>part3 works!</p>
+<body>
+    
+<h1>Formación Académica</h1>
+
+<hr>
 
 <div class="container-fluid" id="container">
     <div class="row">
         <div class="col-md-4 ">
-            <button (click)="show1 = !show1" class="form-control mt-4 mb-4">Estudios Primarios</button>
+            <button (click)="show1 = !show1" class="form-control mt-4 mb-4 text-center">Estudios Primarios</button>
             <div class="panel" *ngIf="show1">
                 <p>Completados _ Liceo Naval Contralmirante Montero</p>
             </div>
         </div>
         <div class="col-md-4">
-            <button (click)="show2 = !show2" class="form-control mt-4 mb-4">Estudios Secundarios</button>
+            <button (click)="show2 = !show2" class="form-control mt-4 mb-4 text-center">Estudios Secundarios</button>
             <div class="panel" *ngIf="show2">
                 <p>Completados _ Liceo Naval Contralmirante Montero</p>
             </div>
         </div>
         <div class="col-md-4">
-            <button (click)="show3 = !show3" class="form-control mt-4 mb-4">Estudios Universitarios</button>
+            <button (click)="show3 = !show3" class="form-control mt-4 mb-4 text-center">Estudios Universitarios</button>
             <div class="panel" *ngIf="show3">
                 <p>En proceso</p>
             </div>
         </div>
     </div>
+    <hr>
+    <h1>Languages</h1>
+    <div class="SkillBar">
+        <div id="Skill-English"> 
+          <span class="Skill-Area ">English</span>
+        </div>
+      </div>
+
+    <div class="SkillBar">
+        <div id="Skill-Spanish"> 
+          <span class="Skill-Area ">Spanish</span>
+        </div>
+      </div>
+
 </div>
 
 
 
+</body>

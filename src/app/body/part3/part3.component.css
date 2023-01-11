@@ -1,22 +1,87 @@
+body{
+    border: #8a3ab9 dashed 2px;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+h1 {
+    color:rgba(98, 9, 182, 0.774);
+  }
+
 button {
     width: 15em;
     background: #DA22FF;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1em;
+    color: aliceblue;
+    font-weight: 700;
 }
+
 
 button:hover {
     box-shadow: #9733EE 0px 0px 4px 3px;
+    color: rgb(233, 236, 52);
 }
+
 .panel {
     width: 15em;
-    padding: 3px;
-    background-color: rgba(152, 94, 206, 0.596);
+    padding: 1em;
+    background-color:rgba(233, 236, 52, 0.295);
+    font-weight: 670;
+    border-radius: 20px;
 }
 
-#container {
-    background: #B993D6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.SkillBar {
+  width: 90%;
+  height: 55px;
+  position: relative;
+  background: rgba(156, 104, 204, 0.3);
+  margin: 20px auto;
+  border-radius: 20px;
+}
+#Skill-English {
+  width: 55%;
+  animation: Animate-English 4s;
+  -webkit-animation: Animate-English 4s;
+  height: 55px;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #eae864ef;
+}
+@keyframes Animate-English {
+  from {
+  width: 10px;
+}
+to {
+  width: 55%}
+}
 
+.Skill-Area {
+  z-index: 1;
+  float: left;
+  margin-top: 15px;
+  margin-left: 15px;
+  text-shadow: none;
+  color: rgb(84, 15, 105);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#Skill-Spanish {
+  width: 100%;
+  animation: Animate-Spanish 4s;
+  -webkit-animation: Animate-Spanish 4s;
+  height: 55px;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #eae864ef;
+}
+@keyframes Animate-Spanish {
+  from {
+  width: 10px;
+}
+to {
+  width: 100%}
 }
