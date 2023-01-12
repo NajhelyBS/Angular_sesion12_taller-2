@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Part4Component {
 
+ grupo1 = ["HTML","Javascript","Pyhton","CSS", "Frameworks", ]
 }
